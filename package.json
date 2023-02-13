@@ -1,0 +1,30 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "Dynamically rendering restaurant homepage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neelg07/Restaurant-Page-TOP.git"
+  },
+  "keywords": [
+    "odin",
+    "javascript",
+    "webpack",
+    "modules",
+    "es6"
+  ],
+  "author": "Neel Gandhi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neelg07/Restaurant-Page-TOP/issues"
+  },
+  "homepage": "https://github.com/neelg07/Restaurant-Page-TOP#readme",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
