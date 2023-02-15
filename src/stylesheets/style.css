@@ -2,22 +2,6 @@ html,
 body {
     padding: 0;
     margin: 0;
-}
-
-body {
-    width: 100vh;
-    height: 100vw;
-}
-
-#content {
-    width: 100%;
     height: 100%;
-}
-
-#sushi-bg {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
 }
-
