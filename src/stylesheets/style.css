@@ -35,6 +35,10 @@ nav {
     display: flex;
 }
 
+#sushi-icon {
+    height: 75px;
+}
+
 nav h1 {
     margin: 0;
     font-size: 50pt;
@@ -54,4 +58,14 @@ nav ul {
     display: flex;
     justify-content: space-evenly;
     gap: 20px;
+}
+
+li a {
+    text-decoration: none;
+    color: var(--txt-color);
+}
+
+li a:hover {
+    display: inline-block;
+    transform: scale(1.2);
 }
