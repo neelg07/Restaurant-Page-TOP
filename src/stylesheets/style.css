@@ -11,12 +11,15 @@ body,
     height: 100%;
     width: 100%;
     min-width: 1170px;
+    min-height: 750px;
 }
 
 #sushi-bg {
     box-sizing: border-box;
     position: absolute;
     opacity: 1;
+
+    height: calc(100% - 106px);
 }
 
 nav {
@@ -28,12 +31,17 @@ nav {
     grid-template: 1fr / 1fr 2fr;
 }
 
+.name {
+    display: flex;
+}
+
 nav h1 {
     margin: 0;
     font-size: 50pt;
     color: var(--txt-color );
     min-width: 328px;
     align-self: center;
+    margin-left: 10px;
 }
 
 nav ul {
