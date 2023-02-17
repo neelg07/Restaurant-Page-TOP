@@ -1,7 +1,49 @@
+html {
+    --txt-color: #2D2926FF;
+}
+
 html,
-body {
+body,
+#content,
+#sushi-bg {
     padding: 0;
     margin: 0;
     height: 100%;
     width: 100%;
+    min-width: 1170px;
+}
+
+#sushi-bg {
+    box-sizing: border-box;
+    position: absolute;
+    opacity: 1;
+}
+
+nav {
+    background-color: #e94b3cff;
+    padding: 15px 50px;
+    background: linear-gradient(var(--txt-color), 25%, #e94b3cff, 85%, var(--txt-color));
+
+    display: grid;
+    grid-template: 1fr / 1fr 2fr;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 50pt;
+    color: var(--txt-color );
+    min-width: 328px;
+    align-self: center;
+}
+
+nav ul {
+    list-style: none;
+    font-size: 30pt;
+    color: var(--txt-color);
+    margin: 0;
+    align-self: center;  
+
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
 }
