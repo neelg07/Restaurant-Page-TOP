@@ -1,4 +1,10 @@
 function renderTemplate() {
+    const template = createContent();
+
+    return template;
+}
+
+function createContent() {
     const content = document.createElement('div');
     content.setAttribute('id', 'content');
 
