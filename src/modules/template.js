@@ -1,7 +1,7 @@
 import createAboutSection from './home';
 
-function renderTemplate() {
-    const template = createContent();
+function renderTemplate(page) {
+    const template = createContent(page);
 
     return template;
 }
