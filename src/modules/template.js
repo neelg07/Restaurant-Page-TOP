@@ -1,10 +1,12 @@
+import createAboutSection from './home';
+
 function renderTemplate() {
     const template = createContent();
 
     return template;
 }
 
-function createContent() {
+function createContent(page) {
     const content = document.createElement('div');
     content.setAttribute('id', 'content');
 
@@ -20,6 +22,11 @@ function createContent() {
     content.appendChild(navDiv);
     content.appendChild(background);
 
+    // Load page based on argument passed in
+    if (page === undefined) {
+        content.appendChild(createAboutSection());
+    }
+
     return content;
 }
 
@@ -27,7 +34,7 @@ function createNav() {
     const nav = document.createElement('nav');
     nav.appendChild(createHeader());
     nav.appendChild(createTabs());
-    
+
     return nav;
 }
 
@@ -69,10 +76,16 @@ function createLink(name) {
     // Add href attr. (change later)
     const link = document.createElement('a');
     link.href = '#';
+    link.setAttribute('id', name);
     link.append(name);
 
     listItem.appendChild(link);
     return listItem;
 }
+
+// Link imported functions to each menu tab //
+const home = document.getElementById('Home');
+const menu = document.getElementById('Menu');
+const contact = document.getElementById('Contact');
 
 export default renderTemplate;
