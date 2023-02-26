@@ -1,5 +1,6 @@
 html {
     --txt-color: #2D2926FF;
+    --red-bg: #e94b3c;
 }
 
 html,
@@ -18,14 +19,15 @@ body,
     box-sizing: border-box;
     position: absolute;
     opacity: 1;
-
+    top: 106px;
     height: calc(100% - 106px);
+    z-index: -1;
 }
 
 nav {
-    background-color: #e94b3cff;
+    background-color: var(--red-bg);
     padding: 15px 50px;
-    background: linear-gradient(var(--txt-color), 25%, #e94b3cff, 85%, var(--txt-color));
+    background: linear-gradient(var(--txt-color), 25%, var(--red-bg), 85%, var(--txt-color));
 
     display: grid;
     grid-template: 1fr / 1fr 2fr;
@@ -68,4 +70,61 @@ li a {
 li a:hover {
     display: inline-block;
     transform: scale(1.2);
+}
+
+/* Start of About Section */
+
+.about {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    
+    margin-left: 250px;
+    margin-top: 65px;
+    width: 750px;
+
+    color: var(--txt-color);
+    text-shadow: 1px 1px black;
+    background-color: rgba(233, 75, 60, .6);
+    border-radius: 25px;
+
+    z-index: 1;
+}
+
+.about h1 {
+    font-size: 40pt;
+}
+
+.about-txt {
+    font-size: 20pt;
+    margin-bottom: 15px;
+}
+
+h2 {
+    margin: 0;
+}
+
+#sushi-chef {
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid var(--txt-color);
+}
+
+#order-btn {
+    height: 40px;
+    width: 100px;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 2px 2px 2px gray;
+
+    margin: 15px 0px;
+}
+
+#order-btn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#order-btn:active {
+    transform: scale(1);
 }
