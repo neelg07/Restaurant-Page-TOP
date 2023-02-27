@@ -2,6 +2,11 @@ import createAboutSection from './home';
 import createContactSection from './contact';
 
 function renderTemplate(page) {
+    // Remove all child nodes from body //
+    const body = document.querySelector('body');
+    while (body.firstChild) {
+        body.removeChild(body.firstChild);
+    }
     const template = createContent(page);
 
     return template;
@@ -78,17 +83,21 @@ function createLink(name) {
     const listItem = document.createElement('li');
     // Add href attr. (change later)
     const link = document.createElement('a');
-    link.href = '#';
     link.setAttribute('id', name);
     link.append(name);
+
+    if (name === 'Home') {
+        link.addEventListener('click', () => {
+            document.body.appendChild(renderTemplate());
+        });
+    } else if (name === 'Contact') {
+        link.addEventListener('click', () => {
+            document.body.appendChild(renderTemplate('Contact'));
+        });
+    }
 
     listItem.appendChild(link);
     return listItem;
 }
-
-// Link imported functions to each menu tab //
-const home = document.getElementById('Home');
-const menu = document.getElementById('Menu');
-const contact = document.getElementById('Contact');
 
 export default renderTemplate;
