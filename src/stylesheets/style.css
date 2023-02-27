@@ -72,9 +72,10 @@ li a:hover {
     transform: scale(1.2);
 }
 
-/* Start of About Section */
+/** Start of About Section */
 
-.about {
+.about,
+.contact {
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -84,14 +85,15 @@ li a:hover {
     width: 750px;
 
     color: var(--txt-color);
-    text-shadow: 1px 1px black;
+    text-shadow: 1px 1px 1px black;
     background-color: rgba(233, 75, 60, .6);
     border-radius: 25px;
 
     z-index: 1;
 }
 
-.about h1 {
+.about h1,
+.contact h1 {
     font-size: 40pt;
 }
 
@@ -127,4 +129,86 @@ h2 {
 
 #order-btn:active {
     transform: scale(1);
+}
+
+/** Start of Menu Section */
+
+/** Start of Contact Section */
+.contact {
+    display: grid;
+    row-gap: 20px;
+}
+
+.contact h1 {
+    justify-self: center;
+    margin: 20px 0 0;
+
+}
+
+.contact > div {
+    margin-left: 150px;
+}
+
+.location,
+.time,
+.telephone,
+.email {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#location-pin,
+#clock-icon,
+#phone-icon,
+#email-icon {
+    width: 30px;
+}
+
+#clock-icon {
+    align-self: flex-start;
+}
+
+textarea {
+    resize: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: fit-content;
+
+    justify-self: center;
+    margin-bottom: 20px;
+
+    color: black;
+    text-shadow: none;
+}
+
+form h2 {
+    align-self: center;
+}
+
+form div {
+    display: flex;
+    gap: 10px;
+}
+
+form div input {
+    margin-left: auto;
+}
+
+form button {
+    width: 120px;
+    height: 25px;
+    align-self: center;
+}
+
+form button:hover {
+    cursor: pointer;
+}
+
+form button:active {
+    transform: scale(0.9);
 }
