@@ -1,4 +1,5 @@
 import createAboutSection from './home';
+import createContactSection from './contact';
 
 function renderTemplate(page) {
     const template = createContent(page);
@@ -23,8 +24,10 @@ function createContent(page) {
     content.appendChild(background);
 
     // Load page based on argument passed in
-    if (page === undefined) {
+    if (page === undefined || page === 'Home') {
         content.appendChild(createAboutSection());
+    } else if (page === 'Contact') {
+        content.appendChild(createContactSection());
     }
 
     return content;

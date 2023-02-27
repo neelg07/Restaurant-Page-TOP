@@ -104,3 +104,5 @@ function createEmail() {
 
     return emailDiv;
 }
+
+export default createContactSection;
