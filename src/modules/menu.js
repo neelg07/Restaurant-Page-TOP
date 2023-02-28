@@ -34,3 +34,5 @@ const desert = {
 };
 
 const menu = {appetizers, sushi, beverages, desert};
+
+export default menu;
