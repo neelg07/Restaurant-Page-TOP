@@ -67,9 +67,18 @@ li a {
     color: var(--txt-color);
 }
 
+li:hover {
+    cursor: pointer;
+}
+
 li a:hover {
     display: inline-block;
     transform: scale(1.2);
+    cursor: pointer;
+}
+
+li a:active {
+    transform: scale(1);
 }
 
 /** Start of About Section */
