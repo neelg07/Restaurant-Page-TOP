@@ -1,4 +1,5 @@
 import createAboutSection from './home';
+import createMenuSection from './menu-render';
 import createContactSection from './contact';
 
 function renderTemplate(page) {
@@ -31,6 +32,8 @@ function createContent(page) {
     // Load page based on argument passed in
     if (page === undefined || page === 'Home') {
         content.appendChild(createAboutSection());
+    } else if (page === 'Menu') {
+        content.appendChild(createMenuSection());
     } else if (page === 'Contact') {
         content.appendChild(createContactSection());
     }
@@ -81,14 +84,19 @@ function createTabs() {
 
 function createLink(name) {
     const listItem = document.createElement('li');
-    // Add href attr. (change later)
+    
     const link = document.createElement('a');
     link.setAttribute('id', name);
     link.append(name);
 
+    // Add event listener depending on each tab name // 
     if (name === 'Home') {
         link.addEventListener('click', () => {
             document.body.appendChild(renderTemplate());
+        });
+    } else if (name === 'Menu') {
+        link.addEventListener('click', () => {
+            document.body.appendChild(renderTemplate('Menu'));
         });
     } else if (name === 'Contact') {
         link.addEventListener('click', () => {
