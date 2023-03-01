@@ -216,6 +216,10 @@ form button:active {
 /** Start of Menu Section */
 .menu {
     width: max(1050px, 55%);
+    height: 735px;
+    overflow-y: scroll;
+
+    margin-top: 35px;
     margin-left: 30px;
 
     padding: 0 25px 20px;
