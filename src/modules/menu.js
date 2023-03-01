@@ -28,11 +28,11 @@ const beverages = {
     sake: new MenuItem('Sake', 8.00, 'Shiro sasa, nigori, peach sparkling, pineapple sparkling, yuzu sparkling'),
 };
 
-const desert = {
+const dessert = {
     iceCream: new MenuItem('Ice Cream', 5.99, 'Vanilla, Chocolate, Strawberry, Mint, Cookies n\' Creme'),
     mochi: new MenuItem('Mochi Ice Cream', 6.99, 'Vanilla, Chocolate, Strawberry, Green Tea'),
 };
 
-const menu = {appetizers, sushi, beverages, desert};
+const menu = {appetizers, sushi, beverages, dessert};
 
 export default menu;
