@@ -35,7 +35,7 @@ function createAppsDiv() {
 
     // Iterate thru all items in appetizer section and append to div //
     for (let item in menu.appetizers) {
-        appsDiv.appendChild(createFoodDiv(item));
+        appsDiv.appendChild(createFoodDiv('appetizers', item));
     }
     return appsDiv;
 }
@@ -54,7 +54,7 @@ function createSushiDiv() {
     sushiDiv.classList.add('sushi');
 
     for (let item in menu.sushi) {
-        sushiDiv.appendChild(createFoodDiv(item));
+        sushiDiv.appendChild(createFoodDiv('sushi', item));
     }
     return sushiDiv;
 }
@@ -73,7 +73,7 @@ function createBeveragesDiv() {
     bevDiv.classList.add('beverages');
 
     for (let item in menu.beverages) {
-        bevDiv.appendChild(createFoodDiv(item));
+        bevDiv.appendChild(createFoodDiv('beverages', item));
     }
     return bevDiv;
 }
@@ -92,29 +92,29 @@ function createDessertDiv() {
     dessertDiv.classList.add('dessert');
 
     for (let item in menu.dessert) {
-        dessertDiv.appendChild(createFoodDiv(item));
+        dessertDiv.appendChild(createFoodDiv('dessert', item));
     }
     return dessertDiv;
 }
 
 // FoodDiv func and all underlying func used for apps, sushi, beverages, and desert sections //
 
-function createFoodDiv(food) {
+function createFoodDiv(course, food) {
     const foodDiv = document.createElement('div');
     foodDiv.classList.add(`${food}`);
 
-    foodDiv.appendChild(createFoodInfo(food));
-    foodDiv.appendChild(createFoodDescription(food));
+    foodDiv.appendChild(createFoodInfo(course, food));
+    foodDiv.appendChild(createFoodDescription(course, food));
 
     return foodDiv;
 }
 
-function createFoodInfo(food) {
+function createFoodInfo(course, food) {
     const infoDiv = document.createElement('div');
     infoDiv.classList.add('info');
 
     infoDiv.appendChild(createFoodImg(food));
-    infoDiv.appendChild(createNamePriceDiv(food));
+    infoDiv.appendChild(createNamePriceDiv(course, food));
 
     return infoDiv;
 }
@@ -128,27 +128,27 @@ function createFoodImg(food) {
     return foodImg;
 }
 
-function createNamePriceDiv(food) {
+function createNamePriceDiv(course, food) {
     const namePriceDiv = document.createElement('div');
     namePriceDiv.classList.add('name-price');
 
     const foodName = document.createElement('h2');
-    foodName.append(food.name);
+    foodName.append(menu[course][food].name);
     namePriceDiv.appendChild(foodName);
 
     const foodPrice = document.createElement('h2');
-    foodPrice.append(`$ ${food.price}`);
+    foodPrice.append(`$ ${menu[course][food].price}`);
     namePriceDiv.appendChild(foodPrice);
 
     return namePriceDiv;
 }
 
-function createFoodDescription(food) {
+function createFoodDescription(course, food) {
     const descriptionDiv = document.createElement('div');
     descriptionDiv.classList.add('description');
 
     const descriptionPara = document.createElement('p');
-    descriptionPara.append(food.description);
+    descriptionPara.append(menu[course][food].description);
     descriptionDiv.appendChild(descriptionPara);
     
     return descriptionDiv;
