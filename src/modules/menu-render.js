@@ -137,7 +137,8 @@ function createNamePriceDiv(course, food) {
     namePriceDiv.appendChild(foodName);
 
     const foodPrice = document.createElement('h2');
-    foodPrice.append(`$ ${menu[course][food].price}`);
+    const cost = menu[course][food].price
+    foodPrice.append(`$ ${cost.toFixed(2)}`);
     namePriceDiv.appendChild(foodPrice);
 
     return namePriceDiv;
