@@ -1,3 +1,5 @@
+import renderTemplate from "./template";
+
 function createAboutSection() {
     const aboutDiv = document.createElement('div');
     aboutDiv.classList.add('about');
@@ -43,6 +45,11 @@ function createOrderBtn() {
     orderBtn.type = 'button';
     orderBtn.setAttribute('id', 'order-btn');
     orderBtn.append('Order Now');
+
+    orderBtn.addEventListener('click', () => {
+        document.body.appendChild(renderTemplate('Menu'));
+    });
+
     return orderBtn;
 }
 
