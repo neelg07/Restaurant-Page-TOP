@@ -121,7 +121,7 @@ function createFoodInfo(course, food) {
 
 function createFoodImg(food) {
     const foodImg = document.createElement('img');
-    foodImg.src = `../docs/images/menu-images/${food}.jpg`;
+    foodImg.src = `./images/menu-images/${food}.jpg`;
     foodImg.alt = `${food}`;
     foodImg.setAttribute('id', `${food}`);
 
