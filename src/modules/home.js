@@ -21,7 +21,7 @@ function createAboutH1() {
 
 function createChefImg() {
     const sushiChef = document.createElement('img');
-    sushiChef.src = '../src/images/Tanoshii-sushi-chef.jpg';
+    sushiChef.src = '../docs/images/Tanoshii-sushi-chef.jpg';
     sushiChef.alt = 'Sushi Chef';
     sushiChef.setAttribute('id', 'sushi-chef');
     return sushiChef;

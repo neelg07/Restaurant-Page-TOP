@@ -25,7 +25,7 @@ function createLocation() {
     locationDiv.classList.add('location');
 
     const locationIcon = document.createElement('img');
-    locationIcon.src = '../src/images/location-pin.png';
+    locationIcon.src = '../docs/images/location-pin.png';
     locationIcon.alt = 'Location Pin';
     locationIcon.setAttribute('id', 'location-pin');
 
@@ -43,7 +43,7 @@ function createTime() {
     timeDiv.classList.add('time');
 
     const timeIcon = document.createElement('img');
-    timeIcon.src = '../src/images/time.png';
+    timeIcon.src = '../docs/images/time.png';
     timeIcon.alt = 'clock-icon';
     timeIcon.setAttribute('id', 'clock-icon');
 
@@ -74,7 +74,7 @@ function createPhoneNum() {
     phoneDiv.classList.add('telephone');
 
     const phoneIcon = document.createElement('img');
-    phoneIcon.src = '../src/images/call.png';
+    phoneIcon.src = '../docs/images/call.png';
     phoneIcon.alt = 'phone-icon';
     phoneIcon.setAttribute('id', 'phone-icon');
 
@@ -92,7 +92,7 @@ function createEmail() {
     emailDiv.classList.add('email');
 
     const emailIcon = document.createElement('img');
-    emailIcon.src = '../src/images/email.png';
+    emailIcon.src = '../docs/images/email.png';
     emailIcon.alt = 'email-icon';
     emailIcon.setAttribute('id', 'email-icon');
 

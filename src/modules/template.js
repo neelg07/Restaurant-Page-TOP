@@ -22,7 +22,7 @@ function createContent(page) {
     navDiv.appendChild(createNav());
 
     const background = document.createElement('img');
-    background.src = '../src/images/sushi-restaurant-bg.jpg';
+    background.src = '../docs/images/sushi-restaurant-bg.jpg';
     background.alt = 'Japanese Restaurant Background';
     background.setAttribute('id', 'sushi-bg');
 
@@ -56,7 +56,7 @@ function createHeader() {
 
     // create sushi icon img
     const sushiIcon = document.createElement('img');
-    sushiIcon.src = '../src/images/sushi-icon.png';
+    sushiIcon.src = '../docs/images/sushi-icon.png';
     sushiIcon.alt = 'Sushi Roll';
     sushiIcon.setAttribute('id', 'sushi-icon');
 
